@@ -1,31 +1,41 @@
 <template>
-  <div class="flex flex-col items-center w-full h-full gap-15">
+
+  <div class="flex flex-col items-center w-full h-full gap-15 overflow-x-hidden">
     <div class="relative">
-      <NuxtImg :src="images.backgroundMainImage" class="relative" height="540" width="1920"/>
+      <NuxtImg class="relative" height="540" src="/466661425_18374289934101335_2662276237959075493_n.jpg" width="1920"/>
       <div class="w-full pl-10 pb-10 flex flex-col items-start absolute bottom-0 z-10 font-bold">
-        <p class="text-xl"> Fa-ti prietena invidioasa!</p>
-        <p class="text-3xl font-">FINEST AUTO DETAILING SERVICE</p>
+        <p class="text-xl md:text-2xl lg:text-3xl font-bold">FINEST AUTO DETAILING SERVICE</p>
       </div>
     </div>
 
-    <Servicii/>
+    <USeparator color="primary" class="text-xl lg:text-3xl w-4/5"><h6>Servicii Oferite</h6></USeparator>
+
+    <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center w-full h-full mx-auto">
+      <Servicii :limit="limit"/>
+      <div class="mt-4 text-center">
+        <UButton active active-color="primary" color="secondary" size="md" to="/servicii"
+                 trailing-icon="material-symbols:arrow-outward" variant="outline">+ {{ 5 - limit }}
+        </UButton>
+      </div>
+    </div>
+
+    <USeparator color="primary" class="w-4/5"/>
 
     <Before_after/>
 
+    <USeparator color="primary" class="w-4/5"/>
+
     <Hero_section/>
+
   </div>
 </template>
 
 <script setup>
-import {images} from "@/assets/images_paths.js"
-import Servicii from "~/components/index_page/Servicii.vue";
-import Before_after from "~/components/index_page/Before_after.vue";
-import Hero_section from "~/components/index_page/hero_section.vue";
+import Servicii from "~/components/servicii/Servicii.vue"
+import Before_after from "~/components/main_page/Before_after.vue";
+import Hero_section from "~/components/main_page/Hero_section.vue";
 
-definePageMeta({
-  colorMode: 'dark',
-})
-
+const limit = 2; // Show only the first 2 services
 </script>
 
 <style scoped>

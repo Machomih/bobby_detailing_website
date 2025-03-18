@@ -1,7 +1,16 @@
+<script lang="ts" setup>
+const colorMode = useColorMode()
+colorMode.preference = 'dark'
+</script>
+
 <template>
-  <AppHeader/>
-    <div>
-      <NuxtPage/>
-    </div>
-  <AppFooter/>
+  <UApp>
+    <AppHeader/>
+    <NuxtPage/>
+    <AppFooter/>
+  </UApp>
+
 </template>
+
+<style scoped>
+</style>

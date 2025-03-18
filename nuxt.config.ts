@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     devtools: {
         enabled: true,
-
         timeline: {
             enabled: true,
         },
@@ -31,13 +30,28 @@ export default defineNuxtConfig({
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
                 {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'},
                 {rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png'},
-                {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
-                {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
                 {rel: 'manifest', href: '/site.webmanifest'},
             ]
         },
     },
     css: ["~/assets/css/main.css"],
+    vite: {plugins: [tailwindcss(),]},
+    content: {
+        preview: {
+            api: 'https://api.nuxt.studio'
+        }
+    },
+    colorMode: {
+        preference: 'dark', // default value of $colorMode.preference
+        fallback: 'dark', // fallback value if not system preference found
+        hid: 'nuxt-color-mode-script',
+        globalName: '__NUXT_COLOR_MODE__',
+        componentName: 'ColorScheme',
+        classPrefix: '',
+        classSuffix: '-mode',
+        storage: 'localStorage', // or 'sessionStorage' or 'cookie'
+        storageKey: 'nuxt-color-mode'
+    },
     primevue: {
         options: {
             theme: {
@@ -51,19 +65,5 @@ export default defineNuxtConfig({
         composables: {
             exclude: ['useToast'],
         },
-    },
-    vite: {
-        plugins: [tailwindcss(),]
-    },
-    colorMode: {
-        preference: 'dark', // default value of $colorMode.preference
-        fallback: 'dark', // fallback value if not system preference found
-        hid: 'nuxt-color-mode-script',
-        globalName: '__NUXT_COLOR_MODE__',
-        componentName: 'ColorScheme',
-        classPrefix: '',
-        classSuffix: '-mode',
-        storage: 'localStorage', // or 'sessionStorage' or 'cookie'
-        storageKey: 'nuxt-color-mode'
     },
 })

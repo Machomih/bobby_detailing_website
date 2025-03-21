@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     },
     css: ["~/assets/css/main.css"],
     vite: {plugins: [tailwindcss(),]},
+    components: true, // Ensure auto-import of components
     content: {
         preview: {
             api: 'https://api.nuxt.studio'

@@ -1,3 +1,6 @@
-# My First Page
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+---
 
-Here is some content.
+<!-- Content of the page -->

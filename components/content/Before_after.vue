@@ -13,10 +13,12 @@
     </ImageCompare>
   </div>
   <div class="flex flex-col items-start w-2/3 mx-auto">
-    <h1 class="text-3xl">Metode ce fac diferenta </h1>
-    <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet aperiam, asperiores aut
-      consequuntur dolor doloribus, est illo ipsum labore numquam provident rem sapiente vel voluptatem? Molestiae
-      possimus reiciendis sapiente!</p>
+    <section>
+      <h1 class="text-4xl">
+        <slot mdc-unwrap="p" />
+      </h1>
+      <slot name="description" />
+    </section>
   </div>
 </template>
 

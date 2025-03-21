@@ -32,10 +32,13 @@
 
 <script setup>
 import Servicii from "~/components/servicii/Servicii.vue"
-import Before_after from "~/components/main_page/Before_after.vue";
+import Before_after from "~/components/content/Before_after.vue";
 import Hero_section from "~/components/main_page/Hero_section.vue";
 
 const limit = 2; // Show only the first 2 services
+
+const { data: page } = await useAsyncData('content', () => queryContent('/index.md'))
+console.log(" THIS IS THE DATA" ,page)
 </script>
 
 <style scoped>

@@ -13,7 +13,9 @@ export default defineContentConfig({
             type: 'page',
             source: 'servicii/*.md',
             schema: z.object({
-                date: z.string()
+                date: z.string(),
+                price: z.number(),
+                imagesPath: z.string()
             })
         }),
         content: defineCollection({

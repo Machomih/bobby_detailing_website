@@ -10,7 +10,7 @@
 
     <USeparator color="primary" class="text-xl lg:text-3xl w-4/5"><h6>Servicii Oferite</h6></USeparator>
 
-    <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center w-full h-full mx-auto">
+    <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-10 w-full h-full mx-auto">
       <Servicii :limit="limit"/>
       <div class="mt-4 text-center">
         <UButton active active-color="primary" color="secondary" size="md" to="/servicii"

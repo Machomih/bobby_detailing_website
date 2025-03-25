@@ -11,14 +11,14 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-        '@nuxt/ui',
-        '@nuxt/icon',
-        '@nuxtjs/color-mode',
-        '@nuxt/image',
-        '@nuxt/eslint',
-        '@nuxt/content',
-        '@primevue/nuxt-module',
-
+      '@nuxt/ui',
+      '@nuxt/icon',
+      '@nuxtjs/color-mode',
+      '@nuxt/image',
+      '@nuxt/eslint',
+      '@nuxt/content',
+      '@primevue/nuxt-module',
+      '@nuxt/scripts',
     ],
     app: {
         head: {
@@ -33,6 +33,13 @@ export default defineNuxtConfig({
                 {rel: 'manifest', href: '/site.webmanifest'},
             ]
         },
+    },
+    scripts: {
+        registry: {
+            googleTagManager: {
+                id: 'G-Y0NJVKM8YW'
+            }
+        }
     },
     css: ["~/assets/css/main.css"],
     vite: {plugins: [tailwindcss(),]},

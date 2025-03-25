@@ -2,7 +2,7 @@
 
   <div class="flex flex-col items-center w-full h-full gap-15 overflow-x-hidden">
     <div class="relative">
-      <NuxtImg class="relative" height="540" src="/background/audi_rs7_inside.jpg" width="1920"/>
+      <NuxtImg class="relative"  src="/background/audi_rs7_inside.jpg" width="1920" height="540"/>
       <div class="w-full pl-10 pb-10 flex flex-col items-start absolute bottom-0 z-10 font-bold">
         <p class="text-xl md:text-2xl lg:text-3xl font-bold">FINEST AUTO DETAILING SERVICE</p>
       </div>

@@ -41,6 +41,9 @@ export default defineNuxtConfig({
             }
         }
     },
+    plugins: [
+        '~/plugins/googleTagManager.ts',
+    ],
     css: ["~/assets/css/main.css"],
     vite: {plugins: [tailwindcss(),]},
     components: true, // Ensure auto-import of components

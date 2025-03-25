@@ -11,14 +11,15 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-      '@nuxt/ui',
-      '@nuxt/icon',
-      '@nuxtjs/color-mode',
-      '@nuxt/image',
-      '@nuxt/eslint',
-      '@nuxt/content',
-      '@primevue/nuxt-module',
-      '@nuxt/scripts',
+        '@nuxt/ui',
+        '@nuxt/icon',
+        '@nuxtjs/color-mode',
+        '@nuxt/image',
+        '@nuxt/eslint',
+        '@nuxt/content',
+        '@primevue/nuxt-module',
+        '@nuxt/scripts',
+        '@zadigetvoltaire/nuxt-gtm'
     ],
     app: {
         head: {
@@ -41,9 +42,6 @@ export default defineNuxtConfig({
             }
         }
     },
-    plugins: [
-        '~/plugins/googleTagManager.ts',
-    ],
     css: ["~/assets/css/main.css"],
     vite: {plugins: [tailwindcss(),]},
     components: true, // Ensure auto-import of components
@@ -75,6 +73,15 @@ export default defineNuxtConfig({
         },
         composables: {
             exclude: ['useToast'],
+        },
+    },
+    runtimeConfig: {
+        public: {
+            gtm: {
+                id: 'GTM-K6SQMZ8S', // Replace with your GTM ID
+                enabled: true, // Set to false if you want to disable it in some environments
+                debug: false, // Set to true to enable console logs for debugging
+            },
         },
     },
 })

@@ -37,8 +37,6 @@ import Hero_section from "~/components/main_page/Hero_section.vue";
 
 const limit = 2; // Show only the first 2 services
 
-const { data: page } = await useAsyncData('content', () => queryContent('/index.md'))
-console.log(" THIS IS THE DATA" ,page)
 </script>
 
 <style scoped>

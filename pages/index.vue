@@ -2,13 +2,14 @@
 
   <div class="flex flex-col items-center w-full h-full gap-15 overflow-x-hidden">
     <div class="relative">
-      <NuxtImg class="relative"  src="/background/audi_rs7_inside.jpg" width="1920" height="540"/>
-      <div class="w-full pl-10 pb-10 flex flex-col items-start absolute bottom-0 z-10 font-bold">
+      <NuxtImg alt="alt_audi" class="header-img" format="webp" height="540" src="/background/audi_a7_oh.jpg"
+               width="1920"/>
+      <div class="w-full pl-10 pb-10 flex absolute bottom-0 font-bold">
         <p class="text-xl md:text-2xl lg:text-3xl font-bold">FINEST AUTO DETAILING SERVICE</p>
       </div>
     </div>
 
-    <USeparator color="primary" class="text-xl lg:text-3xl w-4/5"><h6>Servicii Oferite</h6></USeparator>
+    <USeparator class="text-xl lg:text-3xl w-4/5" color="primary"><h6>Servicii Oferite</h6></USeparator>
 
     <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-10 w-full h-full mx-auto">
       <Servicii :limit="limit"/>
@@ -19,11 +20,11 @@
       </div>
     </div>
 
-    <USeparator color="primary" class="w-4/5"/>
+    <USeparator class="w-4/5" color="primary"/>
 
-    <Before_after/>
+    <BeforeAfter/>
 
-    <USeparator color="primary" class="w-4/5"/>
+    <USeparator class="w-4/5" color="primary"/>
 
     <Hero_section/>
 
@@ -32,11 +33,10 @@
 
 <script setup>
 import Servicii from "~/components/servicii/Servicii.vue"
-import Before_after from "~/components/content/Before_after.vue";
+import BeforeAfter from "~/components/content/BeforeAfter.vue";
 import Hero_section from "~/components/main_page/Hero_section.vue";
 
 const limit = 2; // Show only the first 2 services
-
 </script>
 
 <style scoped>

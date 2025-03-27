@@ -1,5 +1,4 @@
 <script setup>
-import imageFetch from "#image/utils/index.js";
 
 const route = useRoute()
 const {data: home} = await useAsyncData(() =>

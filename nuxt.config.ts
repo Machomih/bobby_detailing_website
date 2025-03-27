@@ -17,9 +17,10 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/eslint',
         '@nuxt/content',
-        '@primevue/nuxt-module',
+        '@nuxthq/studio',
         '@nuxt/scripts',
-        '@zadigetvoltaire/nuxt-gtm'
+        '@zadigetvoltaire/nuxt-gtm',
+        '@primevue/nuxt-module'
     ],
     app: {
         head: {
@@ -48,6 +49,12 @@ export default defineNuxtConfig({
     content: {
         preview: {
             api: 'https://api.nuxt.studio'
+        }
+    },
+    image: {
+        screens: {
+            icon: 40,
+            icon2x: 80
         }
     },
     colorMode: {

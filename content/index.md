@@ -1,6 +1,13 @@
----
-title: 'Title of the page'
-description: 'meta description of the page'
----
+::hero-section
 
-<!-- Content of the page -->
+::before-after
+---
+image1: /Bentley_before.jpeg
+image2: /Bentley_after.jpeg
+---
+#title
+The Everest.
+
+#description
+This is a long long description
+::

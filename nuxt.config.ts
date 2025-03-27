@@ -17,7 +17,6 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/eslint',
         '@nuxt/content',
-        '@nuxthq/studio',
         '@nuxt/scripts',
         '@zadigetvoltaire/nuxt-gtm',
         '@primevue/nuxt-module'

@@ -19,7 +19,6 @@ const items = [
   'https://picsum.photos/640/640?random=6'
 ]
 
-console.log(items)
 </script>
 
 <template>

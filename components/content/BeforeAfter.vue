@@ -1,32 +1,32 @@
 <script lang="ts" setup>
-defineProps({
-  image1: {
-    type: String,
-    default: '/porsche_blue.jpeg',
-  }, image2: {
-    type: String,
-    default: '/porsche_red.jpeg',
-  }
+const props = withDefaults(defineProps<{
+  image1?: { src: string; alt: string },
+  image2?: { src: string; alt: string };
+}>(), {
+  image1: () => ({ src: '/porsche_red.jpeg', alt: 'Detailing Audi' }),
+  image2: () => ({ src: '/porsche_blue.jpeg', alt: 'Detailing Audi' }),
 });
 </script>
 
 <template>
   <div class="card flex justify-center w-2/3">
-    <ImageCompare class="sm:w- shadow-lg rounded-2xl">
+    <ImageCompare class="shadow-lg rounded-2xl">
       <template #left>
-        <NuxtImg :src="image1"/>
+        <NuxtImg :src="props.image1.src" :alt="props.image1.alt"/>
       </template>
       <template #right>
-        <NuxtImg :src="image2"/>
+        <NuxtImg :src="props.image2.src" :alt="props.image2.alt"/>
       </template>
     </ImageCompare>
   </div>
   <div class="flex flex-col items-start w-2/3 mx-auto">
     <section>
-      <h1 class="text-4xl">
+      <h3 class="text-3xl font-bold">
         <slot name="title"/>
-      </h1>
-      <slot name="description"/>
+      </h3>
+      <p class="text-xl">
+        <slot name="description"/>
+      </p>
     </section>
   </div>
 </template>

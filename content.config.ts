@@ -2,6 +2,10 @@ import {defineCollection, defineContentConfig, z} from '@nuxt/content'
 
 export default defineContentConfig({
     collections: {
+        index: defineCollection({
+            type: 'page',
+            source:'index.md',
+        }),
         blog: defineCollection({
             type: 'page',
             source: 'blog/*.md',
@@ -13,15 +17,14 @@ export default defineContentConfig({
             type: 'page',
             source: 'servicii/*.md',
             schema: z.object({
-                date: z.string(),
+                title: z.string(),
+                shortDescription: z.string(),
+                longDescription: z.string(),
                 price: z.number(),
-                imagesPath: z.string()
+                imagePath: z.string(),
+                order: z.number()
             })
-        }),
-        content: defineCollection({
-            type: 'page',
-            source: '**/*.md'
-        }),
+        })
     }
 })
 

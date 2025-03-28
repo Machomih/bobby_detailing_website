@@ -22,19 +22,17 @@ useHead({
   <header>
     <meta content="9tld3YqUQD16DMf3vcY349WLkMdRyFcpL_PAW36RwNs" name="google-site-verification"/>
   </header>
-  <UApp>
-    <noscript>
-      <iframe
-          height="0"
-          src="https://www.googletagmanager.com/ns.html?id=GTM-K6SQMZ8S"
-          style="display:none;visibility:hidden"
-          width="0"
-      ></iframe>
-    </noscript>
-    <AppHeader/>
-    <NuxtPage/>
-    <AppFooter/>
-  </UApp>
+  <noscript>
+    <iframe
+        height="0"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K6SQMZ8S"
+        style="display:none;visibility:hidden"
+        width="0"
+    ></iframe>
+  </noscript>
+  <AppHeader/>
+  <NuxtPage/>
+  <AppFooter/>
 
 </template>
 

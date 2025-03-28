@@ -27,17 +27,23 @@
               <p>Telefon: 0754 279 456</p></li>
             <li class="flex flex-row items-center gap-1">
               <Icon name="ic:baseline-whatsapp"/>
-              <ULink target="_blank" color="secondary" to="https://wa.me/+40754279456?text=urlencodedtext" as="button">
+              <ULink as="link" color="secondary" target="_blank" to="https://wa.me/+40754279456?text=urlencodedtext">
                 <p>Whatsapp: 0754 279 456</p>
               </ULink>
             </li>
             <li class="flex flex-row items-center gap-1">
               <Icon name="ic:baseline-facebook"/>
-              <p>Facebook:</p>
+              <ULink as="button" color="secondary" target="_blank"
+                     to="https://www.facebook.com/profile.php?id=100075685908141">
+                <p>Facebook: Detailing Auto Iasi</p>
+              </ULink>
             </li>
             <li class="flex flex-row items-center gap-1">
               <Icon name="mdi:instagram"/>
-              <p>Instagram:</p>
+              <ULink as="button" color="secondary" target="_blank"
+                     to="https://www.instagram.com/detailing_auto_iasi/">
+                <p>Instagram: Detailing Auto Iasi</p>
+              </ULink>
             </li>
             <li class="flex flex-row items-center gap-1">
               <Icon name="ic:baseline-tiktok"/>
